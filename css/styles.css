@@ -1,0 +1,46 @@
+body{
+    font-size: 22px;
+    background-color: bisque;
+}
+
+button, textarea, select{
+    font: inherit;
+}
+
+main{
+    font-family: monospace;
+}
+h1, h2{
+    color: blue;
+}
+
+.highlight{
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+p{
+    color: purple;
+}
+
+p{
+    color: brown
+}
+
+.gray{
+    color: gray;
+}
+
+.color{
+    margin: 0%;
+    padding: 0%;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: aliceblue;
+    color: rgb(0, 0,0);
+}
+
+.color p{
+    color: #333;
+}
