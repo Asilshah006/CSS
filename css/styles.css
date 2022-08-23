@@ -1,25 +1,26 @@
 body{
-    padding: 5%;
-    font-size: 1rem;
-    font-family:'Courier New', Courier, monospace ;
+    padding:150px;
+    font-size: 1.5rem;
 }
 
-
-/* 
-input,button{
-    font: inherit;
-} */
-
 p{
-    text-decoration: dashed;
-    /* text-transform: capitalize;
-     */text-align: justify;
-    text-indent: 1em;
-    line-height: 1.5;
-    /* letter-spacing: 0.1em;
-    word-spacing: 0.5em
- */
-    font-weight:900 ;
-    font-style: italic ;
+    line-height: 2.5rem;
+}
 
+a{
+  
+    color: #000;
+}
+
+a:visited{
+    color: purple;
+}
+
+a:hover, a:focus{
+    color: aqua;
+    background-color: goldenrod;
+}       
+
+a:active{
+    color: red;
 }
