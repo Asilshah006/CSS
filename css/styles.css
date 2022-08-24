@@ -21,9 +21,3 @@ ul li:nth-child(2){
     color: red;
 }
 
-ul ::marker{
-    color: red;
-    font-family: fantasy;
-    font-size: 1em;
-    content: "only 5$>>";
-}
