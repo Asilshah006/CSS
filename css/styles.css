@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,800;1,600&family=Roboto&display=swap');
 
-html{
-    scroll-behavior: smooth;
-}
 
 *{
     margin: 0;
@@ -13,46 +10,29 @@ html{
 body{
     font-family: 'Roboto';
     font-size: 1.5rem;
-    margin: 0.5rem;
-    
+    padding: 20px;
 }
 
-section{
-    min-height: 100vh;
+.container{
+    max-width: 800px;
+    min-height: 400px;
+    border: 1px solid #333;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-flow:column;
 }
 
-header {
+.box{
+    min-width: 100px;
     height: 100px;
-    position: sticky;
-    top: 0%;
-    font-size: 5rem;
-    text-align: center;
-}
-
- footer{
-
     background-color: black;
-    width: 100vw;
-    position: fixed;
-    bottom: 0%;
-    font-size: 5rem;
-    text-align: center;
-}
-.blue{
-    background-color: blue;
-}
-
-.red{
-    background-color: red;
-   
-}
-
-.green{
-    background-color: green;
-   
-}
-
-a:visited{
-    color: white;
-    text-decoration: underline;
+    color: white;    
+    font-size: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 20%;
 }
