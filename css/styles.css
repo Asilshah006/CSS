@@ -6,70 +6,67 @@
     box-sizing: border-box;
 }
 
-section{
-    display: block;
-}
-
-.nowrap{
-    white-space: nowrap;
-}
-
-
-
 body{
-    
-    margin: 1rem;
-    font-family:'Nunito', sans-serif ;
-    background-image: linear-gradient(to right ,#fff , #00f);
-}
-
-.hero{
-    border-bottom: 2px solid #333;
-    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
-    background-image: url('../img/pat1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    flex-direction: column;
+    min-height: 200vh;
+}
+
+header , nav , main , footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+main{
+    flex-grow: 1;
+    background-color: steelblue;
+    background-image: radial-gradient(white , steelblue);
+}
+
+nav{
+    background-color: white;
+    padding: 20px;
 
 }
 
-.h1{
-    color: #fff;
-    font-size: 500%;
-    text-shadow: 2px 2px 5px #000;
-  
-
+header , footer{
+    position: sticky;
+    background-color: #456579;
 }
 
-.profile-pic-figure{
-    width: 35%;
+header{
+    top:0;
 }
 
-.profile-pic-figure img{
-    width: 100%;
-    height: auto;
-    min-width: 100px;
-    border: 5px double gray;
-    border-radius: 50%;
+footer{
+    bottom: 0;
 }
 
-/* img{
-    display: block;
+@media only screen and (min-width : 471px) {
+    
+    main{
+        background-color: gold;
+        background-image: radial-gradient(white , gold)
+    }
+
+    nav{
+        display: none;
+    }
 }
 
-.example{
-    margin: 1rem;
-    border: 2px solid red ;
-    padding-left: 20px;
+@media only screen and (min-width : 576px) {
+    
+    main{
+        background-color: firebrick;
+        background-image: radial-gradient(white , firebrick)
+    }
+
+    nav{
+        display: none;
+    }
 }
-
-.example img{
-    width: 25%;
-    height: auto;
-
-} */
-
-
+    
