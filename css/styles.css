@@ -1,9 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,800;1,600&family=Roboto&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+img{
+   display: block;
+    max-width: 100%;
+}
+
+:root{
+    --BGCOLOR: #465579; 
+    --ALTERCOLOR : #1e293b;
+    --LIGHTCOLOR : whitesmoke;
+    --CARDCOLOR : bisque;
+
+
+
 }
 
 body{
@@ -11,62 +34,152 @@ body{
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    min-height: 200vh;
+    min-height: 100vh;
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--LIGHTCOLOR) , var(--BGCOLOR));
+
 }
 
-header , nav , main , footer{
-    display: grid;
-    place-content: center;
-    grid-template-columns: 100%;
-    text-align: center;
-}
+
 
 main{
     flex-grow: 1;
-    background-color: steelblue;
-    background-image: radial-gradient(white , steelblue);
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 nav{
-    background-color: white;
+   background-color: var(--ALTERCOLOR);
     padding: 20px;
+   color: var(--LIGHTCOLOR);
+   display: flex;
+   justify-content: space-evenly;
+}
 
+a{
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
 }
 
 header , footer{
     position: sticky;
-    background-color: #456579;
+    background-color: var(--ALTERCOLOR);
+    text-align: center;
 }
 
 header{
+    color: #fff;
     top:0;
+}
+
+.card{
+    scroll-margin-top: 5rem;
+    width: min(100% , 350px);
+    background-color: var(--CARDCOLOR);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 15px 15px 10px -5px #000;
+}
+
+.card figure{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    border: 5px double #333;
+    border-radius: 50%;
+}
+
+.card figcaption{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
 footer{
     bottom: 0;
 }
 
-@media only screen and (min-width : 471px) {
-    
-    main{
-        background-color: gold;
-        background-image: radial-gradient(white , gold)
-    }
-
-    nav{
-        display: none;
-    }
-}
-
 @media only screen and (min-width : 576px) {
     
     main{
-        background-color: firebrick;
-        background-image: radial-gradient(white , firebrick)
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
     }
+    .card{
+        width: min(100% , 400px);
+    }
+
+    .card:last-child{
+        order: -1;
+    } 
+}
+
+
+@media screen and (min-width : 768px) 
+{
+    nav{
+        display: none;
+    }  
+
+    .card{
+        width: min(100% , 325px);
+    }
+
+    .card figure{
+        flex-flow: column-reverse;
+    }
+    
+    .card p{
+        margin-top: 1rem;
+    }
+
+}
+
+@media screen and (min-width : 996px) {
 
     nav{
         display: none;
     }
+
+    .card{
+        width: min(100% , 400px);
+    }
+
 }
+
+@media (prefers-color-scheme: dark){
+       
+    :root{
+    --BGCOLOR:#000;
+    --ALTCOLOR:#333;
+    --CARDCOLOR:purple;
     
+}
+}
+/* @media (prefers-color-scheme: light){
+   
+    :root{
+        --BGCOLOR: #465579; 
+        --ALTERCOLOR : #1e293b;
+        --LIGHTCOLOR : whitesmoke;
+        --CARDCOLOR : bisque;
+
+    }
+
+} */
